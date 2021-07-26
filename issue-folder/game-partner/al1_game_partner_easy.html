@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай слово</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    
+    <link rel="stylesheet" href="./small_virtual_purple_keyboard/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .level1 {
+        border: 2px lightblue dashed;
+        padding-bottom: 5px;
+        border-radius: 50%;
+      }
+    </style>
+
+</head>
+<body>
+  <!-- <button class="">Show keyboard</button> -->
+
+  <div class="keyboard keyboard--hidden">
+      <div class="keyboard__keys"></div>
+  </div>
+
+  <main>
+      <!-- верхня панель з кнопочками -->
+      <div class="buttons">
+        <button class="btn btn-keyboard" style="text-align: center;">⌨ Find</button>
+        <button class="btn btn-virtual-keyboard toggle-keyboard" style="text-align: center;">⌨ Virtual </button>
+        <img class="hidden keyboard-image" src="../alphabet_images/keyboardRussian.png" alt="">
+ 
+        <div class="levels">
+          <div class="level">
+              <a class="level1" href="./al1_game_partner_easy.html"><img src="../alphabet_images/icons/level1.png" alt=""></a>
+          </div>
+          <div class="level">
+              <a class="level2" href="./al1_game_partner_medium.html"><img src="../alphabet_images/icons/level2.png" alt=""></a>
+          </div>
+          <div class="level">
+                <a class="level3" href="#"><img src="../alphabet_images/icons/level3.png" alt=""></a>
+            </div>
+      </div>
+  
+        <a href="../alphabet-group1-landing-pages/alphabet1_games_landing.html" class="btn btn-back">🐛 <i class="fas fa-arrow-left"></i></a>
+        <button class="btn btn--new">💚 <i class="fas fa-redo-alt"></i></button>           
+        <img class="dice btn btn-dice"  src="../alphabet_images/dice/dice-1.png" height="100px" alt="">
+      </div>
+
+      <!-- центральне поле з картинками -->
+      <section class="pictures">
+      </section>
+      
+      <section class="players-wrapper">
+        <div class="input-phrase">
+          <input id="word" type="text" class="btn btn-input use-keyboard-input"  placeholder="пиши слово тут">
+          <button class="btn btn-answer">✔️ Ответ</button>
+        </div>
+      <section class="players">
+        <section class="player player--0 player--active">
+          <div class="current">
+            <input class="current-label label-0 use-keyboard-input" placeholder="ИГРОК 1">
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <div class="current">
+            <input class="current-label label-1 use-keyboard-input" placeholder="ИГРОК 2">
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
+      </section>
+    </section>
+      
+
+        <!-- onfocus="let value = this.value; this.value = null; this.value=value " -->
+      </main>
+      <script src="./small_virtual_purple_keyboard/script.js"></script>
+      <script src="./al1wordbank.js"></script>
+      <script>
+        let wordBank = wordBankEasy;
+      </script>
+      
+      <script src="./script.js"></script>
+</body>
+</html>

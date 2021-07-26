@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай слово</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./small_virtual_purple_keyboard/style.css">
+    <link rel="stylesheet" href="./name_word_alone/style.css">
+    <style>
+      .level1 {
+        border: 2px lightblue dashed;
+        padding-bottom: 5px;
+        border-radius: 50%;
+      }
+    </style>
+</head>
+<body>
+  <div class="keyboard keyboard--hidden">
+    <div class="keyboard__keys"></div>
+</div>
+
+  <main>
+      <div class="buttons">
+        <button class="btn btn-keyboard" style="text-align: center;">⌨ Find</button>
+        <button class="btn btn-virtual-keyboard toggle-keyboard" style="text-align: center;">⌨ Virtual</button>
+        <img class="hidden keyboard-image" src="../alphabet_images/keyboardRussian.png" alt="">
+        
+      <div class="levels">
+          <div class="level">
+              <a class="level1" href="./al1_game_alone_easy.html"><img src="../alphabet_images/icons/level1.png" alt=""></a>
+          </div>
+          <div class="level">
+              <a class="level2" href="./al1_game_alone_medium.html"><img src="../alphabet_images/icons/level2.png" alt=""></a>
+          </div>
+          <div class="level">
+                <a class="level3" href="#"><img src="../alphabet_images/icons/level3.png" alt=""></a>
+            </div>
+      </div>
+
+
+        <a href="../alphabet-group1-landing-pages/alphabet1_games_landing.html" class="btn btn-back">🐛 <i class="fas fa-arrow-left"></i></a>
+        <button class="btn btn--new">💚 <i class="fas fa-redo-alt"></i></button>          
+      </div>
+      <section class="pictures">
+      </section>
+      
+      <section class="bottom-wrapper">
+        
+        <div class="input-phrase bottom-item">
+          <input id="word" type="text" class="btn btn-input use-keyboard-input"  placeholder="пиши слово тут">
+          <button class="btn btn-answer">✔️ Ответ</button>
+          <button class="btn btn-game-finish">🔚 Всё! КОНЕЦ!</button>
+        </div>
+        
+        <section class="results bottom-item">
+          Счёт: _ _ _ _ _
+        </section>
+      </section>
+        
+    </main>
+    <script src="../al1wordbank.js"></script>
+    <script>
+      let wordBank = wordBankEasy;
+    </script>
+    <script src="./small_virtual_purple_keyboard/script.js"></script>
+    <script src="./name_word_alone/script_name_word_alone.js"></script>
+    <script>
+    </script>
+</body>
+</html>
